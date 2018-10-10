@@ -27,15 +27,15 @@ public class JoinInfoDAOImpl implements JoinInfoDAO {
 	}
 
 	@Override
-	public int deleteJoinInfo(int jiNum) {
+	public int deleteJoinInfo(int ujNum) {
 	
-		return ss.delete("SQL.JOININFO.deleteJoinInfo",jiNum);
+		return ss.delete("SQL.JOININFO.deleteJoinInfo",ujNum);
 	}
 
 	@Override
-	public JoinInfo getJoinInfoList(Integer jiNum) {
+	public JoinInfo getJoinInfoList(Integer ujNum) {
 		// TODO Auto-generated method stub
-		return ss.delete();
+		return ss.selectOne("SQL.JOININFO.deleteJoinInfo2",ujNum);
 	}
 
 	@Override

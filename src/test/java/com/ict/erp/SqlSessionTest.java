@@ -1,6 +1,7 @@
+
 package com.ict.erp;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -17,7 +18,7 @@ public class SqlSessionTest {
 	private SqlSession ss;
 	@Test
 	public void test() {
-		System.out.println(ss.selectOne("SQL.LEVELINFO.selectDate"));
+		System.out.println(ss.selectList("SQL.JOININFO.selecetJoinInfoList"));
 	}
 
 }

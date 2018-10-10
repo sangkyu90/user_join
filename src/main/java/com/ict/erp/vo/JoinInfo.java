@@ -14,6 +14,7 @@ public class JoinInfo {
 	private Integer ujBirth;
 	private Integer ujMobile;
 	private String ujAddress;
+	
 	public Integer getUjNum() {
 		return ujNum;
 	}
