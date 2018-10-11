@@ -26,7 +26,7 @@ public class JoinInfoController {
 	}
 	@RequestMapping(value="/joininfo/{ujNum}",method=RequestMethod.GET)
 	public @ResponseBody JoinInfo getJoinInfo(@PathVariable Integer ujNum) {
-	return jis.getJoinInfoList(ujNum);	
+	return jis.getJoinInfo(ujNum);	
 	}
 	
 	@RequestMapping(value="/joininfo",method=RequestMethod.POST)

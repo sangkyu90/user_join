@@ -14,15 +14,14 @@ public class JoinInfoDAOImpl implements JoinInfoDAO {
 	
 	@Autowired
 	private SqlSession ss;
+	
 	@Override
 	public List<JoinInfo> getJoinInfoList(JoinInfo ji) {
-		
 		return ss.selectList("SQL.JOININFO.selecetJoinInfoList",ji);
 	}
 
 	@Override
-	public int insertJoinInfo(JoinInfo ji) {
-		
+	public int insertJoinInfo(JoinInfo ji) {		
 		return ss.insert("SQL.JOININFO.insertJoinInfo", ji);
 	}
 
@@ -33,14 +32,12 @@ public class JoinInfoDAOImpl implements JoinInfoDAO {
 	}
 
 	@Override
-	public JoinInfo getJoinInfoList(Integer ujNum) {
-		// TODO Auto-generated method stub
+	public JoinInfo getJoinInfo(Integer ujNum) {
 		return ss.selectOne("SQL.JOININFO.deleteJoinInfo2",ujNum);
 	}
 
 	@Override
 	public int updateJoinInfo(JoinInfo ji) {
-		// TODO Auto-generated method stub
 		return ss.update("SQL.JOININFO.updateJoinInfo",ji);
 	}
 

@@ -14,33 +14,29 @@ public class JoinInfoServiceImpl implements JoinInfoService {
 	
 	@Autowired
 	private JoinInfoDAO jidao;
+	
 	@Override
 	public List<JoinInfo> getJoinInfoList(JoinInfo ji) {
-		// TODO Auto-generated method stub
 		return jidao.getJoinInfoList(ji);
 	}
 
 	@Override
 	public int insertJoinInfo(JoinInfo ji) {
-		// TODO Auto-generated method stub
 		return jidao.insertJoinInfo(ji);
 	}
 
 	@Override
 	public int deleteJoinInfo(int ujNum) {
-		// TODO Auto-generated method stub
 		return jidao.deleteJoinInfo(ujNum);
 	}
 
 	@Override
-	public JoinInfo getJoinInfoList(Integer ujNum) {
-		// TODO Auto-generated method stub
-		return jidao.getJoinInfoList(ujNum);
+	public JoinInfo getJoinInfo(Integer ujNum) {
+		return jidao.getJoinInfo(ujNum);
 	}
 
 	@Override
 	public int updateJoinInfo(JoinInfo ji) {
-		// TODO Auto-generated method stub
 		return jidao.updateJoinInfo(ji);
 	}
 
