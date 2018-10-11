@@ -38,6 +38,7 @@ var AjaxUtil = function(conf){
 		
 	}
 }
+
 window.addEventListener('load',function(){
 	var conf = {
 			url : '/joininfo',

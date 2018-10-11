@@ -20,29 +20,45 @@ public class JoinInfoController {
 	@Autowired
 	private JoinInfoService jis;
 	
+	//select list
 	@RequestMapping(value="/joininfo",method=RequestMethod.GET)
-	public @ResponseBody List<JoinInfo> getJoinInfoList(@ModelAttribute JoinInfo ji){
+	@ResponseBody
+	public List<JoinInfo> getJoinInfoList(@ModelAttribute JoinInfo ji){
 	return jis.getJoinInfoList(ji);	
 	}
+	
+	//select one
 	@RequestMapping(value="/joininfo/{ujNum}",method=RequestMethod.GET)
-	public @ResponseBody JoinInfo getJoinInfo(@PathVariable Integer ujNum) {
+	@ResponseBody
+	public JoinInfo getJoinInfo(@PathVariable Integer ujNum) {
 	return jis.getJoinInfo(ujNum);	
 	}
 	
+	//insert
 	@RequestMapping(value="/joininfo",method=RequestMethod.POST)
-	 @ResponseBody 
-	 public Integer insertJoinInfo(@RequestBody JoinInfo ji) {
+	@ResponseBody 
+	public Integer insertJoinInfo(@RequestBody JoinInfo ji) {
 		return jis.insertJoinInfo(ji);
 	}
+	
+	//update
 	@RequestMapping(value="/joininfo/{ujNum}",method=RequestMethod.PUT)
 	@ResponseBody
 	public Integer updateJoinInfo(@RequestBody JoinInfo ji,@PathVariable Integer ujNum) {
 		ji.setUjNum(ujNum);
 		return jis.updateJoinInfo(ji);
 	}
+	
+	//delete
 	@RequestMapping(value="/joininfo/{ujNum}",method=RequestMethod.DELETE)
 	@ResponseBody
 	public String  deleteJoinInfo(@PathVariable int ujNum) {
 		return jis.deleteJoinInfo(ujNum)+"";
 	}
+	
+	//signup
+    @RequestMapping(value="/signup", method=RequestMethod.GET)
+    public String signUp() {
+        return "/signup";
+    }
 }

@@ -7,13 +7,30 @@ public class JoinInfo {
 	private Integer ujNum;
 	private String ujId;
 	private String ujPwd;
-	private Integer ujLocal;
+	private String ujLocal;
 	private String ujName;
 	private String ujEmali;
-	private Integer ujGender;
-	private Integer ujBirth;
-	private Integer ujMobile;
+	private String ujGender;
+	private String ujBirth;
+	private String ujMobile;
 	private String ujAddress;
+	
+	
+	public JoinInfo() {}
+	public JoinInfo(Integer ujNum, String ujId, String ujPwd, String ujLocal, String ujName, String ujEmali,
+			String ujGender, String ujBirth, String ujMobile, String ujAddress) {
+		super();
+		this.ujNum = ujNum;
+		this.ujId = ujId;
+		this.ujPwd = ujPwd;
+		this.ujLocal = ujLocal;
+		this.ujName = ujName;
+		this.ujEmali = ujEmali;
+		this.ujGender = ujGender;
+		this.ujBirth = ujBirth;
+		this.ujMobile = ujMobile;
+		this.ujAddress = ujAddress;
+	}
 	
 	public Integer getUjNum() {
 		return ujNum;
@@ -33,10 +50,10 @@ public class JoinInfo {
 	public void setUjPwd(String ujPwd) {
 		this.ujPwd = ujPwd;
 	}
-	public Integer getUjLocal() {
+	public String getUjLocal() {
 		return ujLocal;
 	}
-	public void setUjLocal(Integer ujLocal) {
+	public void setUjLocal(String ujLocal) {
 		this.ujLocal = ujLocal;
 	}
 	public String getUjName() {
@@ -51,22 +68,22 @@ public class JoinInfo {
 	public void setUjEmali(String ujEmali) {
 		this.ujEmali = ujEmali;
 	}
-	public Integer getUjGender() {
+	public String getUjGender() {
 		return ujGender;
 	}
-	public void setUjGender(Integer ujGender) {
+	public void setUjGender(String ujGender) {
 		this.ujGender = ujGender;
 	}
-	public Integer getUjBirth() {
+	public String getUjBirth() {
 		return ujBirth;
 	}
-	public void setUjBirth(Integer ujBirth) {
+	public void setUjBirth(String ujBirth) {
 		this.ujBirth = ujBirth;
 	}
-	public Integer getUjMobile() {
+	public String getUjMobile() {
 		return ujMobile;
 	}
-	public void setUjMobile(Integer ujMobile) {
+	public void setUjMobile(String ujMobile) {
 		this.ujMobile = ujMobile;
 	}
 	public String getUjAddress() {
@@ -75,25 +92,11 @@ public class JoinInfo {
 	public void setUjAddress(String ujAddress) {
 		this.ujAddress = ujAddress;
 	}
+	
 	@Override
 	public String toString() {
 		return "JoinInfo [ujNum=" + ujNum + ", ujId=" + ujId + ", ujPwd=" + ujPwd + ", ujLocal=" + ujLocal + ", ujName="
 				+ ujName + ", ujEmali=" + ujEmali + ", ujGender=" + ujGender + ", ujBirth=" + ujBirth + ", ujMobile="
 				+ ujMobile + ", ujAddress=" + ujAddress + "]";
 	}
-	public JoinInfo(Integer ujNum, String ujId, String ujPwd, Integer ujLocal, String ujName, String ujEmali,
-			Integer ujGender, Integer ujBirth, Integer ujMobile, String ujAddress) {
-		super();
-		this.ujNum = ujNum;
-		this.ujId = ujId;
-		this.ujPwd = ujPwd;
-		this.ujLocal = ujLocal;
-		this.ujName = ujName;
-		this.ujEmali = ujEmali;
-		this.ujGender = ujGender;
-		this.ujBirth = ujBirth;
-		this.ujMobile = ujMobile;
-		this.ujAddress = ujAddress;
-	}
-	public JoinInfo() {}
 }
